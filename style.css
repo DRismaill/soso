@@ -5,16 +5,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
+::-webkit-scrollbar {
+    width: 0;
+}
 
 /* header */
-/* header */
-/* header */
-/* header */
-/* header */
-/* header */
-/* header */
-/* header */
-
 header {
     display: flex;
     justify-content: space-between;
@@ -28,7 +23,6 @@ header,
     display: flex;
     align-items: center;
     padding: 16px 0px;
-
 }
 
 header p {
@@ -50,7 +44,6 @@ header p span {
     cursor: pointer;
 }
 
-
 header p a {
     cursor: help;
     color: #03357C;
@@ -62,26 +55,8 @@ header p a {
     column-gap: 48px;
 }
 
-/* logo */
-/* logo */
-/* logo */
-/* logo */
-/* logo */
-/* logo */
-/* logo */
-/* logo */
-/* logo */
-/* logo */
 
 /* navbar */
-/* navbar */
-/* navbar */
-/* navbar */
-/* navbar */
-/* navbar */
-/* navbar */
-/* navbar */
-
 nav {
     display: flex;
     align-items: center;
@@ -93,12 +68,8 @@ nav a {
     color: black;
 }
 
-/* .nav-1 , .nav-2 , .nav-3 */
-/* .nav-1 , .nav-2 , .nav-3 */
-/* .nav-1 , .nav-2 , .nav-3 */
-/* .nav-1 , .nav-2 , .nav-3 */
-/* .nav-1 , .nav-2 , .nav-3 */
 
+/* .nav-1 , .nav-2 , .nav-3 */
 .nav-1 {
     display: flex;
     align-items: center;
@@ -147,18 +118,8 @@ svg {
     column-gap: 8px;
 }
 
-/* dropdown */
-/* dropdown */
-/* dropdown */
-/* dropdown */
-/* dropdown */
-/* dropdown */
-/* dropdown */
-/* dropdown */
-/* dropdown */
-/* dropdown */
 
-/* Stijl voor dropdown-button */
+/* dropdown */
 .dropdown-button {
     display: flex;
     align-items: center;
@@ -170,7 +131,6 @@ svg {
     border: none;
     cursor: pointer;
     transition: background-color 0.4s ease-out, color 0.4s ease-out;
-
 }
 
 .dropdown-button:hover {
@@ -178,7 +138,6 @@ svg {
     transition: background-color 0.2s ease-out, color 0.2s ease-out;
 }
 
-/* Stijl voor dropdown-menu */
 .dropdown-menu {
     list-style: none;
     padding: 0;
@@ -190,18 +149,14 @@ svg {
     border-top: none;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     max-height: 0;
-    /* Voeg deze regel toe om de animatie te starten vanaf 0 hoogte */
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
-    /* Voeg een overgang toe op max-height */
 }
 
 .dropdown-menu.active {
     max-height: 200px;
-    /* Pas de hoogte aan op basis van je behoeften */
 }
 
-/* Stijl voor dropdown-opties */
 .dropdown-option {
     display: block;
     padding: 8px 16px;
@@ -220,26 +175,14 @@ svg {
     color: #1b1b1b;
     transition: background-color 0.2s ease-in, color 0.2s ease-in;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
 }
 
 
+/* body */
+.container {
+    overflow: hidden;
+}
 
-
-/* body */
-/* body */
-/* body */
-/* body */
-/* body */
-/* body */
-/* body */
-/* body */
-/* body */
-/* body */
-/* body */
-/* body */
-/* body */
-/* body */
 .big-cur {
     color: var(--03357c-CRUOI, #03357C);
     text-align: center;
@@ -250,36 +193,17 @@ svg {
     line-height: 100%;
     margin-top: 356px;
     margin-left: 0;
-    /* Verwijder eventuele linkermarge */
     position: absolute;
-    /* Maak de afbeelding absoluut gepositioneerd */
     left: 0;
-    /* Plaats de afbeelding aan de linkerkant van het scherm */
     top: 0;
-    /* Plaats de afbeelding bovenaan het scherm */
 }
 
-/* Voeg een klasse toe voor de afbeelding zelf en stel de breedte en hoogte in */
 .big-cur img {
     width: 100%;
-    /* 100% breedte van het beschikbare scherm */
     height: 100vh;
-    /* 100% hoogte van het beschikbare scherm */
     object-fit: cover;
-    /* Behoud de beeldverhouding en snijd bij indien nodig */
     object-position: left top;
-    /* Plaats de afbeelding aan de linkerbovenhoek */
 }
-
-
-
-
-
-/* 
-.container {
-    margin-left: 120px;
-    margin-right: 120px;
-} */
 
 .main {
     max-width: 100vw;
@@ -290,20 +214,6 @@ svg {
 
 
 /* hero */
-/* hero */
-/* hero */
-/* hero */
-/* hero */
-/* hero */
-/* hero */
-/* hero */
-/* hero */
-/* hero */
-/* hero */
-/* hero */
-/* hero */
-/* hero */
-
 .hero {
     display: flex;
     justify-content: space-between;
@@ -316,29 +226,27 @@ svg {
     display: flex;
     justify-content: space-between;
     position: relative;
-    background-image: url('img/PAPAPattern.png');
-    /* Voeg het pad naar je PNG-afbeelding toe */
     background-repeat: no-repeat;
     background-position: right top;
-    /* Plaats de afbeelding aan de rechterkant bovenaan */
     background-size: auto;
-    /* Stel de grootte van de afbeelding in op de oorspronkelijke grootte */
 }
 
 .section-hero-info {
     padding-top: 96px;
     max-width: 560px;
-    background-color: rgba(255, 255, 255, 0.7);
-    /* Achtergrondkleur met een beetje transparantie */
-    border: 1px solid #ddd;
     border-radius: 5px;
     margin: 20px auto;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
 }
 
-.decoratie-afbeelding {
-    display: none;
-    /* Verberg de afbeelding omdat deze als achtergrond wordt gebruikt */
+.imgbackground-patterns{
+    padding-top: 25px;
+}
+.imgbackground-patterns img{
+    width: 480px;
 }
 
 .typewriter {
@@ -351,12 +259,8 @@ svg {
         typing 3s steps(40, end),
         blink-caret .5s step-end infinite;
     color: #333;
-    /* Tekstkleur */
     font-size: 24px;
-    /* Lettergrootte */
     font-family: 'Arial', sans-serif;
-    /* Lettertype */
-    /* Voeg andere stijlen toe zoals tekstschaduw, lijnhoogte, enz. */
 }
 
 @keyframes typing {
@@ -380,6 +284,44 @@ svg {
         border-color: orange;
     }
 }
+
+.imgsharesfeer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.imgsharesfeer p , img{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 14px;
+
+}
+.imgsharesfeer img{
+    width: 80px;
+}
+.imgsharesfeer p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 450;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -435,10 +377,7 @@ footer {
     font-style: normal;
     font-weight: 700;
     line-height: 100%;
-    /* 62px */
 }
-
-
 
 .ist-sectionfo p,
 .ist-sectionfo a {
@@ -448,7 +387,6 @@ footer {
     font-style: normal;
     font-weight: 700;
     line-height: 100%;
-    /* 20px */
     position: relative;
     cursor: pointer;
     overflow: hidden;
@@ -474,9 +412,6 @@ footer {
     background-size: 100% 2px;
 }
 
-
-
-
 .ist-sectionfo {
     display: flex;
     flex-direction: column;
@@ -491,7 +426,6 @@ footer {
     font-style: normal;
     font-weight: 700;
     line-height: 100%;
-    /* 48px */
 }
 
 .mail {
@@ -501,7 +435,6 @@ footer {
     font-style: normal;
     font-weight: 700;
     line-height: 100%;
-    /* 20px */
 }
 
 .phonenumber {
@@ -511,7 +444,6 @@ footer {
     font-style: normal;
     font-weight: 700;
     line-height: 100%;
-    /* 20px */
     display: flex;
     align-items: left;
     flex-direction: column;
@@ -529,14 +461,10 @@ footer {
     font-style: normal;
     font-weight: 700;
     line-height: 100%;
-    /* 20px */
     display: flex;
     flex-direction: column;
     row-gap: 24px;
 }
-
-
-
 
 .scnd-section-info-footer p {
     color: var(--white, #FFF);
@@ -545,49 +473,28 @@ footer {
     font-style: normal;
     font-weight: 700;
     line-height: 100%;
-    /* 20px */
     position: relative;
-    /* Voeg een relatieve positie toe aan het element */
     cursor: pointer;
-    /* Voeg een aanwijzer toe om aan te geven dat er iets interactiefs is */
     overflow: hidden;
-    /* Verberg de overloop van het pseudo-element */
 }
 
 .scnd-section-info-footer p::before {
     content: "";
-    /* Voeg een pseudo-element toe */
     background-image: linear-gradient(to right, #FFCC01 0%, #FFCC01 100%);
-    /* Gele achtergrond van links naar rechts */
     background-repeat: no-repeat;
-    /* Herhaal de achtergrond niet */
     background-size: 0% 2px;
-    /* Begin met een breedte van 0 voor de gele lijn */
     background-position: 0 100%;
-    /* Plaats de lijn onderaan */
     position: absolute;
-    /* Maak het pseudo-element absoluut gepositioneerd binnen de bovenliggende p-tag */
     left: 0;
-    /* Plaats het aan de linkerkant van de p-tag */
     bottom: 0;
-    /* Plaats het aan de onderkant van de p-tag */
     width: 100%;
-    /* Zorg ervoor dat de lijn de volledige breedte van de p-tag heeft */
     height: 2px;
-    /* Dikte van de gele lijn */
     transition: background-size 0.3s ease;
-    /* Soepele overgang van de breedte met een duur van 0,3 seconden */
 }
 
 .scnd-section-info-footer p:hover::before {
     background-size: 100% 2px;
-    /* Breid de breedte van de gele lijn uit naar 100% bij hover */
 }
-
-
-
-
-
 
 .trd-section-info-footer {
     display: flex;
@@ -595,7 +502,6 @@ footer {
     flex-direction: column;
     justify-content: flex-start;
     row-gap: 27px;
-
 }
 
 .trd-section-info-footer a {
@@ -608,9 +514,7 @@ footer {
     font-weight: 700;
     line-height: 100%;
     text-decoration: none;
-    /* 40px */
     overflow: hidden;
-    /* Verberg de overflow van de animatie */
 }
 
 .trd-section-info-footer a::before {
@@ -620,16 +524,12 @@ footer {
     left: 0;
     width: 0;
     height: 4px;
-    /* Hoogte van de gele balk onder de link */
     background-color: #FFCC01;
-    /* Gele kleur */
     transition: width 0.3s ease;
-    /* Animatie over 0.3 seconden */
 }
 
 .trd-section-info-footer a:hover::before {
     width: 100%;
-    /* Verander de breedte naar 100% bij hover */
 }
 
 .icons-footer {
@@ -642,18 +542,14 @@ footer {
 .last3 {
     display: flex;
     justify-content: space-between;
-    /* Hiermee creëren we de horizontale afstand van 24px */
     align-items: center;
 }
 
 .first3 img,
 .last3 img {
     margin: 0 12px;
-    /* Horizontale afstand van 12px tussen de icoontjes */
     margin-top: 8px;
-    /* Verticale afstand van 8px boven en onder de icoontjes */
 }
-
 
 .lowbar-footer {
     display: flex;
@@ -672,9 +568,7 @@ footer {
     font-style: normal;
     font-weight: 700;
     line-height: 100%;
-    /* 10px */
     display: flex;
-    /* justify-content: space-between; */
     column-gap: 770px;
 }
 
@@ -686,13 +580,14 @@ footer {
     font-style: normal;
     font-weight: 700;
     line-height: 100%;
-    /* 10px */
     text-decoration: none;
 }
-.group-info-low{
+
+.group-info-low {
     column-gap: 24px;
 }
+
 .lowbar-footer img {
     display: block;
-    margin: 0 auto; /* Hierdoor wordt de afbeelding in het midden van de container geplaatst */
+    margin: 0 auto;
 }
