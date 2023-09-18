@@ -8,6 +8,7 @@
 html:not(#fototottot) {
     display: flex;
     justify-content: center;
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -19,6 +20,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 999;
 }
 
 .header {
@@ -87,7 +89,10 @@ nav a {
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     font-weight: bold;
+
 }
+
+/* .nav-1:onclick {transition: 0.5s ease-in-out;} */
 
 .nav-1 a,
 svg {
@@ -95,6 +100,7 @@ svg {
     align-items: center;
     column-gap: 8px;
 }
+
 
 .nav-2 {
     display: flex;
@@ -222,7 +228,7 @@ width: 1200px;
     object-position: left top;
 }
 
-.main {
+.main:not(.wisemn) {
     width: 100%;
     margin: 0 auto;
     /* Hiermee wordt de inhoud horizontaal gecentreerd */
@@ -249,6 +255,7 @@ width: 1200px;
     background-repeat: no-repeat;
     background-position: right top;
     background-size: auto;
+
 }
 
 .section-hero-info {
@@ -262,13 +269,64 @@ width: 1200px;
     row-gap: 16px;
 }
 
-.imgbackground-patterns {
-    padding-top: 25px;
+.codelanguages img {
+    width: 180px;
+    height: auto;
 }
 
-.imgbackground-patterns img {
-    width: 480px;
+.imgshero {
+    display: flex;
+    align-items: center;
 }
+
+.wisemn {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#wise1 {
+    z-index: 3;
+    transform: rotate(322deg);
+    margin-bottom: -260px;
+}
+
+#wise2 {
+    z-index: 4;
+    transform: rotate(334deg);
+    margin-bottom: -260px;
+}
+
+#wise3 {
+    z-index: 2;
+    transform: rotate(-8deg);
+    margin-bottom: -260px;
+}
+
+#wise4 {
+    z-index: 1;
+    transform: rotate(8deg);
+    margin-bottom: -260px;
+}
+
+#wise5 {
+    z-index: 5;
+    transform: rotate(25deg);
+    margin-bottom: -260px;
+}
+
+#wise6 {
+    z-index: 6;
+    transform: rotate(40deg);
+    margin-bottom: -260px;
+}
+
+#wise7 {
+    z-index: 6;
+    transform: rotate(48deg);
+    margin-bottom: 80pxpx;
+}
+
 
 .typewriter {
     overflow: hidden;
@@ -309,7 +367,8 @@ width: 1200px;
 
 
 
-.imgsharesfeer {
+
+/* .imgsharesfeer {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -333,15 +392,24 @@ img {
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     font-weight: 450;
-}
+} */
 
 
 
 .sfeerinformationblo {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     text-align: center;
+}
+
+.sfeerinformationblo h2 {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    margin-left: 84px;
+    column-gap: 32px;
+    font-size: 24px;
 }
 
 
@@ -358,7 +426,6 @@ img {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-
     text-align: left;
     column-gap: 40px;
 }
@@ -388,7 +455,7 @@ img {
     display: flex;
     align-items: center;
     text-align: left;
-    column-gap: 40px;   
+    column-gap: 40px;
 }
 
 
@@ -401,16 +468,15 @@ img {
     width: 600px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    /* Text align left */
     column-gap: 80px;
     position: relative;
     transform: translateX(0);
     opacity: 0;
     max-height: 0;
     overflow: hidden;
-    transition: transform 0.8s ease, opacity 0.8s ease, max-height 0.8s ease;
+    transition: transform 1s ease, opacity 1s ease, max-height 1s ease;
     margin-bottom: 50px;
+    margin-left: 80px;
 }
 
 .eeninfo img,
@@ -419,8 +485,9 @@ img {
 .vierinfo img,
 .vijfinfo img,
 .zesinfo img {
-    transition: transform 0.8s ease;
+    transition: transform 1s ease;
     margin-bottom: 50px;
+    margin-left: 80px;
 }
 
 .eeninfo:hover .exlcimg1,
@@ -432,6 +499,7 @@ img {
     transform: translateX(-80px);
     opacity: 1;
     max-height: 1000px;
+    margin-left: 80px;
 }
 
 .eeninfo:hover img,
@@ -442,7 +510,111 @@ img {
 .zesinfo:hover img {
     transform: translateX(-80px) rotate(90deg);
     margin-bottom: 50px;
+    margin-left: 80px;
 }
+
+#Opleiding{
+margin-top: 80px;
+
+}
+.Opleiding h3{
+    margin-bottom: 40px;
+    margin-top: 20px;
+
+    column-gap: 32px;
+    font-size: 24px;
+}
+
+.aboutthecourse {
+    background: var(--03357c-CRUOI, #03357C);
+    border-radius: 8px;
+    padding: 16px 32px;
+    margin-bottom: 32px;
+    transition: .4s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.aboutthecourse:hover{
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+    /* backdrop-filter: blur(5px); */
+}
+.aboutthecourse img{
+    width: 400px;
+    height: auto;
+    background-color: #ffffffd3;
+    border-radius: 4px;
+    transition: .4s ease-in-out;
+}
+.aboutthecourse img:hover{
+    background-color: #ffffff;
+}
+
+.aboutthecourse h3 {
+    color: white;
+    margin-bottom: 8px;
+}
+
+.aboutthecourse p {
+    color: white;
+    width: 700px;
+
+}
+
+
+.versnelmogelijkheid {
+    /* background-color: #BEB0FF; */
+    border-radius: 8px;
+    padding: 16px 32px;
+    margin-bottom: 32px;
+    transition: .4s ease-in-out;
+}
+.versnelmogelijkheid:hover{
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    /* backdrop-filter: blur(3px); */
+}
+
+/* .versnelmogelijkheid h3 {}
+
+.versnelmogelijkheid p {} */
+
+
+
+.opdeblockk {
+    background: var(--03357c-CRUOI, #03357C);
+    border-radius: 8px;
+    padding: 16px 32px;
+    margin-bottom: 80px;
+    transition: .4s ease-in-out;
+
+}
+.opdeblockk:hover{
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+    /* backdrop-filter: blur(5px); */
+}
+
+.opdeblockk h3 {
+    color: white;
+
+}
+
+.opdeblockk p {
+    color: white;
+
+}
+
+
+.Rooster h3{
+    margin-bottom: 40px;
+    margin-top: 20px;
+
+    column-gap: 32px;
+    font-size: 24px;
+
+}
+
+
 
 
 
