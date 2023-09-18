@@ -337,7 +337,6 @@ img {
 
 
 
-/* Plaats alle informatieblokken in het midden van het scherm in een kolomindeling */
 .sfeerinformationblo {
     display: flex;
     flex-direction: column;
@@ -350,41 +349,49 @@ img {
 .eeninfo {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     text-align: left;
+    column-gap: 40px;
 }
 
 .tweeinfo {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+
     text-align: left;
+    column-gap: 40px;
 }
 
 .drieinfo {
     display: flex;
     align-items: center;
     text-align: left;
+    column-gap: 40px;
 }
 
 .vierinfo {
     display: flex;
     align-items: center;
     text-align: left;
+    column-gap: 40px;
 }
 
 .vijfinfo {
     display: flex;
     align-items: center;
     text-align: left;
+    column-gap: 40px;
 }
 
 .zesinfo {
     display: flex;
     align-items: center;
     text-align: left;
+    column-gap: 40px;   
 }
 
 
-/* Voeg stijlen toe voor elk informatieblok */
 .exlcimg1,
 .exlcimg2,
 .exlcimg3,
@@ -403,11 +410,9 @@ img {
     max-height: 0;
     overflow: hidden;
     transition: transform 0.8s ease, opacity 0.8s ease, max-height 0.8s ease;
-    margin-bottom: 20px;
-    /* Afstand tussen informatieblokken */
+    margin-bottom: 50px;
 }
 
-/* Voeg stijlen toe voor de afbeeldingen */
 .eeninfo img,
 .tweeinfo img,
 .drieinfo img,
@@ -415,9 +420,9 @@ img {
 .vijfinfo img,
 .zesinfo img {
     transition: transform 0.8s ease;
+    margin-bottom: 50px;
 }
 
-/* Voeg stijlen toe voor de hover-effecten */
 .eeninfo:hover .exlcimg1,
 .tweeinfo:hover .exlcimg2,
 .drieinfo:hover .exlcimg3,
@@ -425,13 +430,10 @@ img {
 .vijfinfo:hover .exlcimg5,
 .zesinfo:hover .exlcimg6 {
     transform: translateX(-80px);
-    /* Verschuif naar links */
     opacity: 1;
     max-height: 1000px;
-    /* Pas de gewenste maximale hoogte aan */
 }
 
-/* Voeg stijlen toe voor de afbeeldingrotatie bij hover */
 .eeninfo:hover img,
 .tweeinfo:hover img,
 .drieinfo:hover img,
@@ -439,8 +441,7 @@ img {
 .vijfinfo:hover img,
 .zesinfo:hover img {
     transform: translateX(-80px) rotate(90deg);
-    /* margin-bottom: 40px; */
-    /* Verschuif naar links en draai */
+    margin-bottom: 50px;
 }
 
 
