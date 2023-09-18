@@ -5,6 +5,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html:not(#fototottot) {
+    display: flex;
+    justify-content: center;
+}
+
 ::-webkit-scrollbar {
     width: 0;
 }
@@ -12,10 +17,15 @@
 /* header */
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-left: 120px;
-    margin-right: 120px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 382.52px;
 }
 
 header,
@@ -179,12 +189,15 @@ svg {
 
 
 /* body */
-/* body{
-    margin-left: 120px;
-    margin-right: 120px;
+/* body:not(#fototottot){
+width: 1200px;
 } */
 .container {
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .big-cur {
@@ -210,10 +223,13 @@ svg {
 }
 
 .main {
-    max-width: 100vw;
-    width: max-content;
-    margin-left: 120px;
-    margin-right: 120px;
+    width: 100%;
+    margin: 0 auto;
+    /* Hiermee wordt de inhoud horizontaal gecentreerd */
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
@@ -222,8 +238,8 @@ svg {
     display: flex;
     justify-content: space-between;
     position: relative;
-    margin-left: 120px;
-    margin-right: 120px;
+    /* margin-left: 120px;
+    margin-right: 120px; */
 }
 
 .hero {
@@ -290,6 +306,9 @@ svg {
     }
 }
 
+
+
+
 .imgsharesfeer {
     display: flex;
     align-items: center;
@@ -318,116 +337,110 @@ img {
 
 
 
-
+/* Plaats alle informatieblokken in het midden van het scherm in een kolomindeling */
 .sfeerinformationblo {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-
-.sfeerinformationblo h2 {
+    align-items: center;
     text-align: center;
-    font-size: 32px;
-
 }
+
+
 
 .eeninfo {
     display: flex;
-    flex-direction: row;
-    column-gap: 80px;
+    align-items: center;
     text-align: left;
 }
-.exlcimg1{
-
-}
-.exlcimg1 h3{
-font-size: 24px;
-}
-.exlcimg1 p{
-    max-width: 860px;
-}
-
-
 
 .tweeinfo {
     display: flex;
-    flex-direction: row;
-    column-gap: 80px;
-    text-align: right;
+    align-items: center;
+    text-align: left;
 }
-.exlcimg2{
-
-}
-.exlcimg2 h3{
-    font-size: 24px;
-}
-.exlcimg2 p{
-    max-width: 860px;
-}
-
 
 .drieinfo {
     display: flex;
-    flex-direction: row;
-    column-gap: 80px;
+    align-items: center;
+    text-align: left;
 }
-.exlcimg3{
-
-}
-.exlcimg3 h3{
-    font-size: 24px;
-}
-.exlcimg3 p{
-    max-width: 860px;
-}
-
 
 .vierinfo {
     display: flex;
-    flex-direction: row;
-    column-gap: 80px;
+    align-items: center;
+    text-align: left;
 }
-.exlcimg4{
-
-}
-.exlcimg4 h3{
-    font-size: 24px;
-}
-.exlcimg4 p{
-    max-width: 860px;
-}
-
 
 .vijfinfo {
     display: flex;
-    flex-direction: row;
-    column-gap: 80px;
+    align-items: center;
+    text-align: left;
 }
-.exlcimg5{
-
-}
-.exlcimg5 h3{
-    font-size: 24px;
-}
-.exlcimg5 p{
-    max-width: 860px;
-}
-
-
 
 .zesinfo {
     display: flex;
-    flex-direction: row;
-    column-gap: 80px;
+    align-items: center;
+    text-align: left;
 }
-.exlcimg6{
 
+
+/* Voeg stijlen toe voor elk informatieblok */
+.exlcimg1,
+.exlcimg2,
+.exlcimg3,
+.exlcimg4,
+.exlcimg5,
+.exlcimg6 {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Text align left */
+    column-gap: 80px;
+    position: relative;
+    transform: translateX(0);
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: transform 0.8s ease, opacity 0.8s ease, max-height 0.8s ease;
+    margin-bottom: 20px;
+    /* Afstand tussen informatieblokken */
 }
-.exlcimg6 h3{
-    font-size: 24px;
+
+/* Voeg stijlen toe voor de afbeeldingen */
+.eeninfo img,
+.tweeinfo img,
+.drieinfo img,
+.vierinfo img,
+.vijfinfo img,
+.zesinfo img {
+    transition: transform 0.8s ease;
 }
-.exlcimg6 p{
-    max-width: 700px;
+
+/* Voeg stijlen toe voor de hover-effecten */
+.eeninfo:hover .exlcimg1,
+.tweeinfo:hover .exlcimg2,
+.drieinfo:hover .exlcimg3,
+.vierinfo:hover .exlcimg4,
+.vijfinfo:hover .exlcimg5,
+.zesinfo:hover .exlcimg6 {
+    transform: translateX(-80px);
+    /* Verschuif naar links */
+    opacity: 1;
+    max-height: 1000px;
+    /* Pas de gewenste maximale hoogte aan */
+}
+
+/* Voeg stijlen toe voor de afbeeldingrotatie bij hover */
+.eeninfo:hover img,
+.tweeinfo:hover img,
+.drieinfo:hover img,
+.vierinfo:hover img,
+.vijfinfo:hover img,
+.zesinfo:hover img {
+    transform: translateX(-80px) rotate(90deg);
+    /* margin-bottom: 40px; */
+    /* Verschuif naar links en draai */
 }
 
 
@@ -462,8 +475,10 @@ footer {
 }
 
 .main-content-footer:not(#twintow) {
-    margin-right: 120px;
-    margin-left: 120px;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .io {
@@ -491,8 +506,7 @@ footer {
 }
 
 .exl-sidebar {
-    margin-left: 120px;
-    margin-right: 120px;
+    width: 1200px;
     display: flex;
     justify-content: space-around;
     align-items: center;
