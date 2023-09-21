@@ -5,7 +5,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-html:not(#fototottot) {
+html {
     display: flex;
     justify-content: center;
     scroll-behavior: smooth;
@@ -20,7 +20,15 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 999;
+    /* z-index: 999; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    color: inherit;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 1000;
 }
 
 .header {
@@ -28,6 +36,15 @@ header {
     flex-direction: row;
     align-items: center;
     column-gap: 382.52px;
+    background-color: transparent;
+    color: inherit;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 1000;
+}
+
+header.header-animated {
+    background-color: #03357C;
+    color: white;
 }
 
 header,
@@ -54,13 +71,17 @@ header p span {
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
+    transition: color 0.8s, background 0.8s;
+    /* Voeg deze regel toe */
 }
+
 
 header p a {
     cursor: help;
     color: #03357C;
     text-decoration: none;
 }
+
 
 .navANDdropdown {
     display: flex;
@@ -76,8 +97,8 @@ nav {
 }
 
 nav a {
+    color: inherit;
     text-decoration: none;
-    color: black;
 }
 
 
@@ -118,6 +139,7 @@ svg {
     column-gap: 8px;
 }
 
+
 .nav-3 {
     display: flex;
     align-items: center;
@@ -141,12 +163,15 @@ svg {
     align-items: center;
     column-gap: 8px;
     font-family: 'Poppins', sans-serif;
+    background-color: transparent;
+    color: inherit;
+
     font-size: 20px;
     font-weight: bold;
-    background: none;
+    /* background: none; */
     border: none;
     cursor: pointer;
-    transition: background-color 0.4s ease-out, color 0.4s ease-out;
+    transition: background-color 0.2s ease-out, color 0.2 s ease-out;
 }
 
 .dropdown-button:hover {
@@ -178,7 +203,7 @@ svg {
     padding: 8px 16px;
     text-decoration: none;
     color: #1b1b1b;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -189,9 +214,10 @@ svg {
     background-color: #C2C3BF;
     border: 1px;
     color: #1b1b1b;
-    transition: background-color 0.2s ease-in, color 0.2s ease-in;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+
 
 
 /* body */
@@ -268,6 +294,7 @@ width: 1200px;
     flex-direction: column;
     margin-left: 80px;
     row-gap: 16px;
+    margin-top: 120px;
 }
 
 .codelanguages img {
@@ -364,6 +391,8 @@ width: 1200px;
         border-color: orange;
     }
 }
+
+
 
 
 
@@ -514,20 +543,23 @@ img {
     margin-left: 80px;
 }
 
-#Opleiding{
-margin-top: 80px;
+#Opleiding {
+    margin-top: 80px;
 
 }
-.Opleiding h3{
+
+.Opleiding h3 {
     margin-bottom: 40px;
     margin-top: 20px;
 
     column-gap: 32px;
     font-size: 24px;
 }
-#uvuvuwe{
+
+#uvuvuwe {
     margin-left: 80px;
 }
+
 .aboutthecourse {
     background: var(--03357c-CRUOI, #03357C);
     /* border-radius: 2px; */
@@ -596,7 +628,8 @@ margin-top: 80px;
 
 .aboutthecourse .popup-trigger:hover .popup-image {
     transform: scale(1.05);
-    cursor: pointer; /* Voeg een handcursor toe wanneer de afbeelding kan worden geopend */
+    cursor: pointer;
+    /* Voeg een handcursor toe wanneer de afbeelding kan worden geopend */
 }
 
 .aboutthecourse .popup-trigger.active .popup {
@@ -624,9 +657,10 @@ margin-top: 80px;
     transform: scale(0.9);
 
 }
-.versnelmogelijkheid:hover{
+
+.versnelmogelijkheid:hover {
     border-radius: 16px;
-background-color: #56def034;
+    background-color: #56def034;
     /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5); */
     transform: scale(1);
     /* box-shadow: 0 0 10px rgba(1, 1, 0, 0.5); */
@@ -649,7 +683,8 @@ background-color: #56def034;
 
 
 }
-.opdeblockk:hover{
+
+.opdeblockk:hover {
     /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5); */
     border-radius: 16px;
 
@@ -669,19 +704,21 @@ background-color: #56def034;
 }
 
 
-.Rooster{
+.Rooster {
     padding: 16px 32px;
     margin-bottom: 80px;
     transition: .4s ease-in-out;
     transform: scale(0.9);
 }
-.Rooster:hover{
+
+.Rooster:hover {
     border-radius: 16px;
 
     transform: scale(1);
     /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
 }
-.Rooster h3{
+
+.Rooster h3 {
     margin-bottom: 40px;
     margin-top: 20px;
 
@@ -693,31 +730,132 @@ background-color: #56def034;
 
 
 
-.vakken{
-background-color: #2a3d51;
-width: 1200px;
-width: 100%;
-display: flex;
-flex-direction: column;
+.vakken {
+    width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-.blokA{
+.blokA {
     margin-top: 24px;
     margin-bottom: 120px;
+    padding: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
     gap: 16px;
     flex-wrap: wrap;
+    background: var(--03357c-CRUOI, #03357C);
+
+
 }
-.blokA p{
+
+.iconlistvak {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    /* Hiermee stel je de afstand tussen afbeeldingen in */
+    align-items: center;
+    /* Hiermee worden de afbeeldingen verticaal gecentreerd */
+}
+
+.iconlistvak img {
+    max-width: 100%;
+    /* Zorgt ervoor dat de breedte niet wordt overschreden */
+    height: auto;
+    /* Behoudt de oorspronkelijke hoogte van de afbeeldingen */
+    margin-right: 4px;
+    /* Voegt extra ruimte aan de rechterkant van elke afbeelding toe */
+    margin-bottom: 4px;
+    /* Voegt extra ruimte onder elke afbeelding toe */
+}
+
+
+
+
+.blokA p {
     width: 300px;
 }
-.blokA h4{
+
+.blokA h4 {
     width: 300px;
 }
-.card1{
+
+
+
+.blokB {
+    margin-top: 24px;
+    margin-bottom: 120px;
+    padding: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    background: var(--03357c-CRUOI, #03357C);
+    transition: border-radius 0.4s;
+
+}
+
+.blokB:hover {
+    border-radius: 8px;
+}
+
+.blokB p {
+    width: 300px;
+}
+
+.blokB h4 {
+    width: 300px;
+}
+
+
+.Overzicht {
+    margin-top: 24px;
+    margin-bottom: 120px;
+    padding: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    background: var(--03357c-CRUOI, #03357C);
+
+}
+
+
+.Overzicht,
+.BlokB,
+.blokA {
+    transition: border-radius 0.4s;
+}
+
+.Overzicht:hover,
+.BlokB:hover,
+.blokA:hover {
+    border-radius: 8px;
+}
+
+
+
+.Overzicht p {
+    width: 300px;
+}
+
+.Overzicht h4 {
+    width: 300px;
+}
+
+
+
+
+.card1 {
     background-color: #FFF;
     padding: 20px;
     width: 360px;
@@ -725,225 +863,561 @@ flex-direction: column;
     display: flex;
     flex-direction: column;
     row-gap: 24px;
-}
-.card2{
-    background-color: #FFF;
-    padding: 20px;
-    width: 360px;    
-    height: 328px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
-
-}
-.card3{
-    background-color: #FFF;
-    padding: 20px;
-    width: 360px;    
-    height: 328px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
-
-}
-.card4{
-    background-color: #FFF;
-    padding: 20px;
-    width: 360px;    
-    height: 328px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
-
-}
-.card5{
-    background-color: #FFF;
-    padding: 20px;
-    width: 360px;  
-    height: 328px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
-  
-}
-.card6{
-    background-color: #FFF;
-    padding: 20px;
-    width: 360px;  
-    height: 328px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
-  
-}
-.card7{
-    background-color: #FFF;
-    padding: 20px;
-    width: 360px; 
-    height: 328px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
-   
+    position: relative;
+    /* Voeg dit toe */
 }
 
-.blokB{
-    margin-top: 24px;
-    margin-bottom: 120px;
+.card2 {
+    background-color: #FFF;
+    padding: 20px;
+    width: 360px;
+    height: 328px;
     display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    position: relative;
+    /* Voeg dit toe */
+}
+
+
+
+.card3 {
+    background-color: #FFF;
+    padding: 20px;
+    width: 360px;
+    height: 328px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    position: relative;
+    /* Voeg dit toe */
+
+}
+
+.card4 {
+    background-color: #FFF;
+    padding: 20px;
+    width: 360px;
+    height: 328px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    position: relative;
+    /* Voeg dit toe */
+
+}
+
+.card5 {
+    background-color: #FFF;
+    padding: 20px;
+    width: 360px;
+    height: 328px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    position: relative;
+    /* Voeg dit toe */
+
+}
+
+.card6 {
+    background-color: #FFF;
+    padding: 20px;
+    width: 360px;
+    height: 328px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    position: relative;
+    /* Voeg dit toe */
+}
+
+.card7 {
+    background-color: #FFF;
+    padding: 20px;
+    width: 360px;
+    height: 328px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    position: relative;
+    /* Voeg dit toe */
+}
+
+
+.card8 {
+    background-color: #FFF;
+    padding: 20px;
+    width: 360px;
+    height: 328px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    position: relative;
+    /* Voeg dit toe */
+
+}
+
+.card9 {
+    background-color: #FFF;
+    padding: 20px;
+    width: 360px;
+    height: 328px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    position: relative;
+    /* Voeg dit toe */
+
+}
+
+.card10 {
+    background-color: #FFF;
+    padding: 20px;
+    width: 360px;
+    height: 328px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    position: relative;
+    /* Voeg dit toe */
+
+}
+
+.card11 {
+    background-color: #FFF;
+    padding: 20px;
+    width: 360px;
+    height: 328px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    position: relative;
+    /* Voeg dit toe */
+
+}
+
+.card12 {
+    background-color: #FFF;
+    padding: 20px;
+    width: 360px;
+    height: 328px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    position: relative;
+    /* Voeg dit toe */
+
+}
+
+.card13 {
+    background-color: #FFF;
+    padding: 20px;
+    width: 360px;
+    height: 328px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    position: relative;
+    /* Voeg dit toe */
+
+}
+
+
+
+
+.card14 {
+    background-color: #FFF;
+    padding: 20px;
+    width: 360px;
+    height: 328px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    position: relative;
+    /* Voeg dit toe */
+
+}
+
+.card15 {
+    background-color: #FFF;
+    padding: 20px;
+    width: 360px;
+    height: 328px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    position: relative;
+    /* Voeg dit toe */
+
+}
+
+.card16 {
+    background-color: #FFF;
+    padding: 20px;
+    width: 360px;
+    height: 328px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    position: relative;
+    /* Voeg dit toe */
+
+}
+
+.card17 {
+    background-color: #FFF;
+    padding: 20px;
+    width: 360px;
+    height: 328px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    position: relative;
+    /* Voeg dit toe */
+
+}
+
+.card18 {
+    background-color: #FFF;
+    padding: 20px;
+    width: 360px;
+    height: 328px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    position: relative;
+    /* Voeg dit toe */
+}
+
+
+
+
+
+
+
+.card1,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6,
+.card7,
+.card8,
+.card9,
+.card10,
+.card11,
+.card12,
+.card13,
+.card14,
+.card15,
+.card16,
+.card17,
+.card18 {
+    position: relative;
+    overflow: hidden;
+    background-color: #FFF;
+    border-left: 4px solid #FFCC01;
+    /* Verander de linker randkleur naar geel bij hover */
+    color: black;
+    border-left: 4px solid transparent;
+    /* Voeg een transparante linker rand toe */
+    transition: border-left 0.8s, background-color 0.8s, color 0.7s, border-radius 0.9s;
+    /* Voeg een overgang toe */
+}
+
+.card1:hover,
+.card2:hover,
+.card3:hover,
+.card4:hover,
+.card5:hover,
+.card6:hover,
+.card7:hover,
+.card8:hover,
+.card9:hover,
+.card10:hover,
+.card11:hover,
+.card12:hover,
+.card13:hover,
+.card14:hover,
+.card15:hover,
+.card16:hover,
+.card17:hover,
+.card18:hover {
+    background-color: #FFCC01;
+    /* Verander de achtergrondkleur naar geel bij hover */
+    border-left: 4px solid #FFCC01;
+    /* Verander de linker randkleur naar geel bij hover */
+    border-radius: 8px;
+    /* Pas de border-radius aan bij hover */
+    color: white;
+    /* Verander de tekstkleur naar wit bij hover */
+    img
+}
+
+
+
+.card1:hover .iconlistvak img,
+.card2:hover .iconlistvak img,
+.card3:hover .iconlistvak img,
+.card4:hover .iconlistvak img,
+.card5:hover .iconlistvak img,
+.card6:hover .iconlistvak img,
+.card7:hover .iconlistvak img,
+.card8:hover .iconlistvak img,
+.card9:hover .iconlistvak img,
+.card10:hover .iconlistvak img,
+.card11:hover .iconlistvak img,
+.card12:hover .iconlistvak img,
+.card13:hover .iconlistvak img,
+.card14:hover .iconlistvak img,
+.card15:hover .iconlistvak img,
+.card16:hover .iconlistvak img,
+.card17:hover .iconlistvak img,
+.card18:hover .iconlistvak img {
+    filter: brightness(0) invert(1);
+}
+
+.card1,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6,
+.card7,
+.card8,
+.card9,
+.card10,
+.card11,
+.card12,
+.card13,
+.card14,
+.card15,
+.card16,
+.card17,
+.card18 {
+    width: 360px;
+    height: 60px;
+    overflow: hidden;
+    transition: height 0.8s ease;
+    /* Voeg een animatie toe aan de hoogte */
+}
+
+.card1:hover,
+.card2:hover,
+.card3:hover,
+.card4:hover,
+.card5:hover,
+.card6:hover,
+.card7:hover,
+.card8:hover,
+.card9:hover,
+.card10:hover,
+.card11:hover,
+.card12:hover,
+.card13:hover,
+.card14:hover,
+.card15:hover,
+.card16:hover,
+.card17:hover,
+.card18:hover {
+    padding: 20px;
+    width: 360px;
+    height: 328px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    position: relative;
+    transition: height 0.8s ease;
+    /* Voeg een animatie toe aan de hoogte bij hover */
+}
+
+.card1:hover h4,
+.card2:hover h4,
+.card3:hover h4,
+.card4:hover h4,
+.card5:hover h4,
+.card6:hover h4,
+.card7:hover h4,
+.card8:hover h4,
+.card9:hover h4,
+.card10:hover h4,
+.card11:hover h4,
+.card12:hover h4,
+.card13:hover h4,
+.card14:hover h4,
+.card15:hover h4,
+.card16:hover h4,
+.card17:hover h4,
+.card18:hover h4 {
+    display: block;
+    /* Zorg ervoor dat de h4-titel altijd zichtbaar is tijdens het hoveren */
+}
+
+
+
+
+.card1,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6,
+.card7,
+.card8,
+.card9,
+.card10,
+.card11,
+.card12,
+.card13,
+.card14,
+.card15,
+.card16,
+.card17,
+.card18 {
+    width: 360px;
+    height: 60px;
+    overflow: hidden;
+    transition: height 0.8s ease;
+    position: relative;
+    /* Voeg position: relative toe aan de kaarten */
+}
+
+.card1 .iconlistvak,
+.card2 .iconlistvak,
+.card3 .iconlistvak,
+.card4 .iconlistvak,
+.card5 .iconlistvak,
+.card6 .iconlistvak,
+.card7 .iconlistvak,
+.card8 .iconlistvak,
+.card9 .iconlistvak,
+.card10 .iconlistvak,
+.card11 .iconlistvak,
+.card12 .iconlistvak,
+.card13 .iconlistvak,
+.card14 .iconlistvak,
+.card15 .iconlistvak,
+.card16 .iconlistvak,
+.card17 .iconlistvak,
+.card18 .iconlistvak {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFF;
+    padding: 8px;
+    display: none;
+    transition: background-color 0.8s ease, height 0.8s ease;
+    /* Voeg een animatie toe aan de achtergrondkleur en hoogte */
+}
+
+.card1:hover,
+.card2:hover,
+.card3:hover,
+.card4:hover,
+.card5:hover,
+.card6:hover,
+.card7:hover,
+.card8:hover,
+.card9:hover,
+.card10:hover,
+.card11:hover,
+.card12:hover,
+.card13:hover,
+.card14:hover,
+.card15:hover,
+.card16:hover,
+.card17:hover,
+.card18:hover {
+    height: 328px;
+    transition: height 0.8s ease;
+}
+
+.card1:hover .iconlistvak,
+.card2:hover .iconlistvak,
+.card3:hover .iconlistvak,
+.card4:hover .iconlistvak,
+.card5:hover .iconlistvak,
+.card6:hover .iconlistvak,
+.card7:hover .iconlistvak,
+.card8:hover .iconlistvak,
+.card9:hover .iconlistvak,
+.card10:hover .iconlistvak,
+.card11:hover .iconlistvak,
+.card12:hover .iconlistvak,
+.card13:hover .iconlistvak,
+.card14:hover .iconlistvak,
+.card15:hover .iconlistvak,
+.card16:hover .iconlistvak,
+.card17:hover .iconlistvak,
+.card18:hover .iconlistvak {
+    display: block;
+    background-color: #FFCC01;
+    transition: background-color 0.8s ease, height 0.8s ease;
+}
+
+.card1:hover h4,
+.card2:hover h4,
+.card3:hover h4,
+.card4:hover h4,
+.card5:hover h4,
+.card6:hover h4,
+.card7:hover h4,
+.card8:hover h4,
+.card9:hover h4,
+.card10:hover h4,
+.card11:hover h4,
+.card12:hover h4,
+.card13:hover h4,
+.card14:hover h4,
+.card15:hover h4,
+.card16:hover h4,
+.card17:hover h4,
+.card18:hover h4 {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+/* Voeg dit toe aan je bestaande CSS-bestand */
+.docenten {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    align-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-
-}
-.blokB p{
-    width: 300px;
-}
-.blokB h4{
-    width: 300px;
-}
-.card8{
-    background-color: #FFF;
-    padding: 20px;
-    width: 360px;   
-    height: 328px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
- 
-}
-.card9{
-    background-color: #FFF;
-    padding: 20px;
-    width: 360px;  
-    height: 328px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
-  
-}
-.card10{
-    background-color: #FFF;
-    padding: 20px;
-    width: 360px;    
-    height: 328px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
-
-}
-.card11{
-    background-color: #FFF;
-    padding: 20px;
-    width: 360px;   
-    height: 328px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
- 
-}
-.card12{
-    background-color: #FFF;
-    padding: 20px;
-    width: 360px;    
-    height: 328px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
-
-}
-.card13{
-    background-color: #FFF;
-    padding: 20px;
-    width: 360px;    
-    height: 328px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
-
-}
-
-
-.Overzicht{
+    gap: 32px;
+    background-color: #03357C;
     margin-top: 24px;
     margin-bottom: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-}
-.Overzicht p{
-    width: 300px;
-}
-.Overzicht h4{
-    width: 300px;
-}
-.card14{
-    background-color: #FFF;
-    padding: 20px;
-    width: 360px;    
-    height: 328px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
-
-}
-.card15{
-    background-color: #FFF;
-    padding: 20px;
-    width: 360px;    
-    height: 328px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
-
-}
-.card16{
-    background-color: #FFF;
-    padding: 20px;
-    width: 360px;    
-    height: 328px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
-
-}
-.card17{
-    background-color: #FFF;
-    padding: 20px;
-    width: 360px;    
-    height: 328px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
-
-}
-.card18{
-    background-color: #FFF;
-    padding: 20px;
-    width: 360px;    
-    height: 328px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
-
+    transition: border-radius 0.4s;
+    padding: 16px;
 }
 
+.docenten:hover {
+    border-radius: 8px;
+}
 
+.docent {
+    width: 200px;
+    padding: 16px;
+    text-align: center;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    transition: background-color 0.4s, color 0.4s;
+    margin-bottom: 16px;
+}
 
-
-
-
-
-
-
-
-
-
+.docent:hover {
+    background-color: #FFCC01;
+    color: white;
+}
 
 
 
@@ -953,7 +1427,8 @@ flex-direction: column;
 /* Footer */
 footer {
     background: var(--03357c-CRUOI, #03357C);
-    width: 100%;
+    width: 128%;
+    margin-left: -168px;
     height: 410px;
     flex-shrink: 0;
     display: flex;
@@ -967,6 +1442,7 @@ footer {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin-left: 128px;
 }
 
 .io {
@@ -1008,6 +1484,7 @@ footer {
     font-style: normal;
     font-weight: 700;
     line-height: 100%;
+    margin-left: -128px;
 }
 
 .ist-sectionfo p,
@@ -1017,6 +1494,7 @@ footer {
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
+    text-decoration: none;
     line-height: 100%;
     position: relative;
     cursor: pointer;
@@ -1094,10 +1572,11 @@ footer {
     line-height: 100%;
     display: flex;
     flex-direction: column;
+    text-decoration: none;
     row-gap: 24px;
 }
 
-.scnd-section-info-footer p {
+.scnd-section-info-footer a {
     color: var(--white, #FFF);
     font-family: Poppins;
     font-size: 20px;
@@ -1105,16 +1584,20 @@ footer {
     font-weight: 700;
     line-height: 100%;
     position: relative;
+    text-decoration: none;
+
     cursor: pointer;
     overflow: hidden;
 }
 
-.scnd-section-info-footer p::before {
+.scnd-section-info-footer a::before {
     content: "";
     background-image: linear-gradient(to right, #FFCC01 0%, #FFCC01 100%);
     background-repeat: no-repeat;
     background-size: 0% 2px;
     background-position: 0 100%;
+    text-decoration: none;
+
     position: absolute;
     left: 0;
     bottom: 0;
@@ -1123,7 +1606,7 @@ footer {
     transition: background-size 0.3s ease;
 }
 
-.scnd-section-info-footer p:hover::before {
+.scnd-section-info-footer a:hover::before {
     background-size: 100% 2px;
 }
 
@@ -1222,3 +1705,30 @@ footer {
     display: block;
     margin: 0 auto;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
